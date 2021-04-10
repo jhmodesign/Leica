@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LEICA</title>
+   <link rel="icon" href="img/favicon.png">
+   <link rel="icon" type="image/x-icon" href="img/favicon.ico"> 
+
+   <link rel="stylesheet" href="css/index.css">
+
+</head>
+<body>
+   <header>   
+      <nav class="gnb">
+         <img class="gnb_img" src="img/head.jpg">
+      </nav>
+
+   </header>
+
+   <main>
+      <div class="hero">
+         <div class="hero_slide">
+            <img class="hero_slide_title" src="img/hero_1 – 2.png">
+         </div>
+         <div class="hero_slide">
+            <img class="hero_slide_title" src="img/hero_2 – 2.png">
+         </div>
+         <div class="hero_slide">
+            <img class="hero_slide_title" src="img/hero_3 – 2.png">
+         </div>
+         <div class="hero_slide">
+            <img class="hero_slide_title" src="img/hero_4 – 2.png">
+         </div>
+        
+      </div>
+
+      <div class="main_wrap_1">
+         <img src="img/1920_1_1.jpg" class="main_img_1920">
+      </div>
+
+      <!-- History -->
+      <div class="history"> 
+         <img src="img/history.jpg" class="history_img">
+      </div>
+
+      <div class="main_wrap_3">
+         <img src="img/1920_1_2.jpg" class="main_img_1920">
+      </div>
+
+       <!-- Newsletter -->
+       <div class="newsletter"> 
+         <!-- <img src="img/video.png" class="vedio_img"> -->
+         <video class="newsletter_video" autoplay muted loop>
+            <source src="video/newsletter.mp4">
+         </video>
+
+         <img src="img/video.png" class="newsletter_img">
+         
+      </div> 
+
+   </main>
+
+   <footer>
+      <div class="footer_wrap">
+         <img src="img/footer.jpg" class="footer_img">
+      </div>
+      
+   </footer>
+
+   <script>
+      var currentSlide = 0;
+      var nextSlide;
+
+      // function slideChange(target) {
+         
+      //    for (i=0; i<4; i++)
+      //    { 
+      //       if (i != target) {
+      //          document.getElementsByClassName('hero_slide')[i].style = "display:none";
+
+      //          document.getElementsByClassName('hero_slide_button')[i].style = "background-color: rgba(255,255,255,0.4);";
+
+      //       }
+      //    }
+
+      //    document.getElementsByClassName('hero_slide')[target].style = "display:block; animation:fade_in 0.5s forwards;";
+
+      //    document.getElementsByClassName('hero_slide_button')[target].style = "background-color: rgba(255,255,255,1);";
+
+      //    currentSlide = target;
+      // }
+  
+      function autoSlide() {
+
+         nextSlide = currentSlide + 1;
+
+         if (nextSlide == 4) { nextSlide = 0;}
+           
+         for (i=0; i<4; i++)
+            { 
+               if (i != nextSlide) {
+
+                     document.getElementsByClassName('hero_slide')[i].style = "display:none";
+
+                     // document.getElementsByClassName('hero_slide_button')[i].style = "background-color: rgba(255,255,255,0.4);";
+
+                  }
+            }
+
+         document.getElementsByClassName('hero_slide')[nextSlide].style = "display:block; animation:fade_in 0.5s forwards;";
+
+         // document.getElementsByClassName('hero_slide_button')[nextSlide].style = "background-color: rgba(255,255,255,1);";
+
+         currentSlide++; 
+         if (currentSlide == 4) { currentSlide = 0;}
+      }
+      
+      
+      var autoSlideChage = setInterval(autoSlide,3000);
+  
+      </script>
+</body>
+</html>
