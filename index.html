@@ -16,10 +16,12 @@
       <nav class="gnb">
          <img class="gnb_img" src="img/head.jpg">
       </nav>
-
    </header>
 
    <main>
+
+      <!-- Hero Slide -->
+
       <div class="hero">
          <div class="hero_slide">
             <img class="hero_slide_title" src="img/hero_1 – 2.png">
@@ -36,15 +38,19 @@
         
       </div>
 
+
+      <!-- Our Value -->
       <div class="main_wrap_1">
          <img src="img/1920_1_1.jpg" class="main_img_1920">
       </div>
+
 
       <!-- History -->
       <div class="history"> 
          <img src="img/history.jpg" class="history_img">
       </div>
 
+      <!-- New Techlogoy -->
       <div class="main_wrap_3">
          <img src="img/1920_1_2.jpg" class="main_img_1920">
       </div>
@@ -72,25 +78,6 @@
    <script>
       var currentSlide = 0;
       var nextSlide;
-
-      // function slideChange(target) {
-         
-      //    for (i=0; i<4; i++)
-      //    { 
-      //       if (i != target) {
-      //          document.getElementsByClassName('hero_slide')[i].style = "display:none";
-
-      //          document.getElementsByClassName('hero_slide_button')[i].style = "background-color: rgba(255,255,255,0.4);";
-
-      //       }
-      //    }
-
-      //    document.getElementsByClassName('hero_slide')[target].style = "display:block; animation:fade_in 0.5s forwards;";
-
-      //    document.getElementsByClassName('hero_slide_button')[target].style = "background-color: rgba(255,255,255,1);";
-
-      //    currentSlide = target;
-      // }
   
       function autoSlide() {
 
@@ -104,14 +91,10 @@
 
                      document.getElementsByClassName('hero_slide')[i].style = "display:none";
 
-                     // document.getElementsByClassName('hero_slide_button')[i].style = "background-color: rgba(255,255,255,0.4);";
-
                   }
             }
 
          document.getElementsByClassName('hero_slide')[nextSlide].style = "display:block; animation:fade_in 0.5s forwards;";
-
-         // document.getElementsByClassName('hero_slide_button')[nextSlide].style = "background-color: rgba(255,255,255,1);";
 
          currentSlide++; 
          if (currentSlide == 4) { currentSlide = 0;}
@@ -120,6 +103,8 @@
       
       var autoSlideChage = setInterval(autoSlide,3000);
   
-      </script>
+   </script>
+
+  
 </body>
 </html>
